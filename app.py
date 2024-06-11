@@ -22,37 +22,53 @@ column_width = 4
 
 # page layout
 _, row0_col1, _ = st.columns([1,8,1])
-_, row1_col1, _ = st.columns([1,8,1])
-_, row2_col1, row2_col2, _ = st.columns([1, column_width, column_width, 1])
+_, row1_col1, row1_col2, row1_col3, row1_col4, _ = st.columns([1, 2,2,2,2, 1])
+_, row2_col1, row2_col2, row2_col3, _ = st.columns([1, 2,2,4, 1])
+_, row3_col1, _ = st.columns([1,8,1])
+_, row4_col1, row4_col2, _ = st.columns([1, column_width, column_width, 1])
 
+### prompt and options
 with row0_col1:
-    ### title
-    st.title("Prompt Enhancer with a Local LLM")
-    st.write("By Jared Bailey")
+    ### header
+    st.markdown("<h1 style='text-align: center;'>Prompt Enhancement with a Local LLM</h1>", unsafe_allow_html=True)
 
     ### initial user prompt
-    st.subheader("Enter a Prompt")
-    user_prompt = st.text_area("Prompt", "Once upon a time")
+    st.subheader("Enter Your Prompt")
+    user_prompt = st.text_area(label="Prompt", value="Once upon a time", label_visibility="collapsed")
 
-    ### user options as checkboxes
-    st.subheader("Options")
-    option1 = st.checkbox("Option 1")
-    option2 = st.checkbox("Option 2")
-    option3 = st.checkbox("Option 3")
+    ### options
+    st.write("")
+    st.subheader("Enhancement Options")
+    with row1_col1:
+        option1 = st.checkbox("Short Response")
+    with row1_col2:
+        option1 = st.checkbox("Long Response")
+    with row1_col3:
+        option2 = st.checkbox("Professional Tone")
+    with row1_col4:
+        option3 = st.checkbox("Forbid Clichés")
+
+    with row2_col1:
+        option4 = st.checkbox("Provide Source Citations")
+    with row2_col2:
+        option5 = st.checkbox("Detailed Response")
+    with row2_col3:
+        option6 = st.checkbox("Provide Steps Taken to Arrive at Answer")
+    # in the style of an email
 
 ### generate button
-with row1_col1:
+with row3_col1:
     if st.button("Generate"):
         st.write("Generating...")
 
-        with row2_col1:
+        with row4_col1:
             # generate output
             output = "This is a generated output from the original prompt."
 
             # display output
             st.write(output)
 
-        with row2_col2:
+        with row4_col2:
             # generate output
             output = "This is a generated output from the enhanced prompt."
 
