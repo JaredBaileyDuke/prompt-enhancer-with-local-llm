@@ -2,6 +2,7 @@
 # Imports
 ###
 import streamlit as st
+from source.api_call import llm_message
 
 ###
 # setup
@@ -63,14 +64,15 @@ with row3_col1:
 
         with row4_col1:
             # generate output
-            output = "This is a generated output from the original prompt."
+            output1 = "This is a generated output from the original prompt."
 
             # display output
-            st.write(output)
+            st.write(output1)
 
         with row4_col2:
             # generate output
-            output = "This is a generated output from the enhanced prompt."
+            output2 = llm_message(user_message="Write 1 sentence about llamas.").content
+            
 
             # display output
-            st.write(output)
+            st.write(output2)
