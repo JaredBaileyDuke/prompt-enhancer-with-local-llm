@@ -47,7 +47,7 @@ def test_option_7_edit():
     assert option_7_edit("No") == ""
 
     # Test case 2
-    assert option_7_edit("Yes") == "Showcase your steps to arrive at an answer"
+    assert option_7_edit("Yes") == "Include a source citations in your response"
 
     # Test case 3
     assert option_7_edit("") == ""
