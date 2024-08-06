@@ -1,4 +1,6 @@
-# Run tests to verify the prompt_combo module
+"""
+Run tests to verify the prompt_combo module
+"""
 
 # Imports
 import sys
