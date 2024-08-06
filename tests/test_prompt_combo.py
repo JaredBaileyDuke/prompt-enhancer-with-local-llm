@@ -1,6 +1,8 @@
 # Run tests to verify the prompt_combo module
 
-import pytest
+# Import the module
+from source.prompt_combo import prompt_combo
+
 import sys
 import os
 # Get the current file's directory
@@ -9,8 +11,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 # Add the grandparent directory to the system path
 sys.path.append(parent_dir)
-# Import the module
-from source.prompt_combo import *
+
 
 
 # Define the test functions
@@ -38,8 +39,3 @@ def test_prompt_combo():
     assert prompt_combo("What you are playing", "Game", "Sport", "Instrument") == "What you are playing. Your response should have the following attributes: Game. Sport. Instrument"
     # Test case 10
     assert prompt_combo("What you are learning", "Language", "Skill", "Subject") == "What you are learning. Your response should have the following attributes: Language. Skill. Subject"
-
-
-# Run the test functions
-if __name__ == "__main__":
-    print(test_prompt_combo())
