@@ -26,14 +26,16 @@ def test_prompt_combo():
     Test the prompt_combo function
     """
     # Test case 1
-    assert prompt_combo("Where you are from", "New York", "New York City", "NYC") == \
-                            "Where you are from. Your response should have the following \
-                                attributes: New York. New York City. NYC"
+    assert prompt_combo("Where you are from", "New York", "New York City", "NYC") == (
+        "Where you are from. Your response should have the following attributes: "
+        "New York. New York City. NYC"
+        )
     
     # Test case 2
-    assert prompt_combo("What you are doing", "Working", "Studying", "Playing") == \
-        "What you are doing. Your response should have the following attributes: Working. \
-            Studying. Playing"
+    assert prompt_combo("What you are doing", "Working", "Studying", "Playing") == (
+        "What you are doing. Your response should have the following attributes: "
+        "Working. Studying. Playing"
+        )
     
     # Test case 3
     assert prompt_combo("What you are eating", "Pizza", "Burger", "Salad") == \
