@@ -1,6 +1,6 @@
-###
-# On Click Functions
-###
+"""
+On click functions for the Streamlit app.
+"""
 
 import streamlit as st
 
@@ -60,3 +60,4 @@ def restrart():
     st.session_state.option7 = ""
     st.session_state.enhanced_prompt = ""
     st.session_state.llm_output = ""
+    

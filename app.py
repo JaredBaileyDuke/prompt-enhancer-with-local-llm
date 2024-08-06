@@ -252,15 +252,15 @@ with row2_col1:
 
         # Clean up wording of user inputs
         st.session_state.option3 = option_3to5_edit(
-            input=st.session_state.option3, 
+            option_input=st.session_state.option3, 
             preceeding_text="The audience is "
             )
         st.session_state.option4 = option_3to5_edit(
-            input=st.session_state.option4, 
+            option_input=st.session_state.option4, 
             preceeding_text="The tone is "
             )
         st.session_state.option5 = option_3to5_edit(
-            input=st.session_state.option5, 
+            option_input=st.session_state.option5, 
             preceeding_text="The desired response length is "
             )
         st.session_state.option6 = option_6_edit(st.session_state.option6)
