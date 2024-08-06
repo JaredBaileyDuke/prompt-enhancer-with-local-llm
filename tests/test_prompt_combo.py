@@ -1,10 +1,10 @@
 # Run tests to verify the prompt_combo module
 
-# Import the module
-from source.prompt_combo import prompt_combo
-
+# Imports
 import sys
 import os
+from source.prompt_combo import prompt_combo
+
 # Get the current file's directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory

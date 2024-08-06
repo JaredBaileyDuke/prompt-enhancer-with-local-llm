@@ -1,10 +1,10 @@
 # Run tests to verify the prompt_enhancements module
 
-# Import the module
-from source.prompt_enhancements import option_3to5_edit, option_6_edit, option_7_edit
-
+# Imports
 import sys
 import os
+from source.prompt_enhancements import option_3to5_edit, option_6_edit, option_7_edit
+
 # Get the current file's directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory
@@ -52,4 +52,3 @@ def test_option_7_edit():
 
     # Test case 3
     assert option_7_edit("") == ""
-    
