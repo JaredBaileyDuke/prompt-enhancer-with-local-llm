@@ -1,4 +1,4 @@
-FROM python:3.9.19-alpine
+FROM python:3.9.9-slim
 
 # copy the app files to the container
 COPY . /app/
@@ -7,13 +7,14 @@ COPY . /app/
 WORKDIR /app
 
 # install required packages from requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
 # expose the port the app runs on
-EXPOSE 5000
+# EXPOSE 5000
 
 # run the app
-CMD ["python", "app.py"]
+CMD ["streamlit", "run", "app.py"]
 
 # # make a dockerfile that will run the streamlit app using python
 

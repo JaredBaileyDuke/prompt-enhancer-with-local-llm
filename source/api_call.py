@@ -7,7 +7,7 @@ def llm_message(system_message="You are Llamafile, an AI assistant.", user_messa
     """
     # This is a conversation between User and Llama, a friendly chatbot. Llama is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
     client = OpenAI(
-        base_url='http://localhost:8080/v1',
+        base_url='http://host.docker.internal:8080/v1',
         api_key="sk-no-key-required"
     )
 
