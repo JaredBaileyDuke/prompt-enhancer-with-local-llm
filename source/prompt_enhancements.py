@@ -21,10 +21,10 @@ def option_6_edit(input):
     Returns:
         str
     """
-    if input == "No":
-        return ""
-    else:
+    if input == "Yes":
         return "Showcase your steps to arrive at an answer"
+    else:
+        return ""
     
 
 def option_7_edit(input):
@@ -35,7 +35,7 @@ def option_7_edit(input):
     Returns:
         str
     """
-    if input == "No":
-        return ""
-    else:
+    if input == "Yes":
         return "Include a source citations in your response"
+    else:
+        return ""
