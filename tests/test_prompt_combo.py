@@ -1,7 +1,7 @@
 # Run tests to verify the prompt_combo module
 
 import pytest
-from source.prompt_combo import *
+from ..source.prompt_combo import *
 
 # Define the test functions
 def test_prompt_combo():
