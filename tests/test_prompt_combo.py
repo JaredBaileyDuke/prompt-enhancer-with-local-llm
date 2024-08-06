@@ -30,13 +30,11 @@ def test_prompt_combo():
         "Where you are from. Your response should have the following attributes: "
         "New York. New York City. NYC"
         )
-    
     # Test case 2
     assert prompt_combo("What you are doing", "Working", "Studying", "Playing") == (
         "What you are doing. Your response should have the following attributes: "
         "Working. Studying. Playing"
         )
-    
     # Test case 3
     assert prompt_combo("What you are eating", "Pizza", "Burger", "Salad") == \
         "What you are eating. Your response should have the following attributes: Pizza. Burger. \
