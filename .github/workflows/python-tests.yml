@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 'python-3.9.9-linux-20.04-x64.tar.gz'
+        python-version: 'python-3.9.13'
 
     - name: Install dependencies
       run: |
