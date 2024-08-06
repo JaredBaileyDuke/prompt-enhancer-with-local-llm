@@ -1,4 +1,8 @@
-def option_3to5_edit(input, preceeding_text):
+"""
+This module contains functions that prepare the user input for the LLM.
+"""
+
+def option_3to5_edit(option_input, preceeding_text):
     """
     Minor edit to the user input for options 3-5.
     Args:
@@ -7,13 +11,12 @@ def option_3to5_edit(input, preceeding_text):
     Returns:
         str
     """
-    if input == "":
-        return input
-    else:
-        return preceeding_text + input.lower()
-    
+    if option_input == "":
+        return option_input
+    return preceeding_text + option_input.lower()
 
-def option_6_edit(input):
+
+def option_6_edit(option_input):
     """
     Edit to the user input for option 6, making it readable for the LLM.
     Args:
@@ -21,13 +24,12 @@ def option_6_edit(input):
     Returns:
         str
     """
-    if input == "Yes":
+    if option_input == "Yes":
         return "Showcase your steps to arrive at an answer"
-    else:
-        return ""
-    
+    return ""
 
-def option_7_edit(input):
+
+def option_7_edit(option_input):
     """
     Edit to the user input for option 7, making it readable for the LLM.
     Args:
@@ -35,7 +37,6 @@ def option_7_edit(input):
     Returns:
         str
     """
-    if input == "Yes":
+    if option_input == "Yes":
         return "Include a source citations in your response"
-    else:
-        return ""
+    return ""

@@ -5,7 +5,7 @@ import streamlit as st
 from source.api_call import llm_message
 from source.prompt_enhancements import *
 from source.prompt_combo import *
-from source.static_variables import num_options, column_width
+from source.static_variables import NUM_OPTIONS
 from source.on_click_functions import *
 
 
@@ -65,9 +65,9 @@ with row0_col1:
 
 ### progress bar
 with row1_col1:
-    if st.session_state.page_tracker <= num_options:
+    if st.session_state.page_tracker <= NUM_OPTIONS:
         st.progress(
-            st.session_state.page_tracker / num_options, 
+            st.session_state.page_tracker / NUM_OPTIONS, 
             text="Progress"
         )
 
@@ -228,7 +228,7 @@ with row2_col1:
 
 
     ### Navigation buttons
-    if st.session_state.page_tracker >= 1 and st.session_state.page_tracker <= num_options:
+    if st.session_state.page_tracker >= 1 and st.session_state.page_tracker <= NUM_OPTIONS:
         with row3_col1:
             st.button(
                 "Next Option", 
@@ -242,7 +242,7 @@ with row2_col1:
 
 
     ### LLM output
-    if st.session_state.page_tracker > num_options:
+    if st.session_state.page_tracker > NUM_OPTIONS:
         if st.session_state.llm_output == "":
             st.markdown(
                 "<p style='text-align: center;'>Please be patient while the AI assistant generates your response.</p>", 
@@ -252,15 +252,15 @@ with row2_col1:
 
         # Clean up wording of user inputs
         st.session_state.option3 = option_3to5_edit(
-            input=st.session_state.option3, 
+            option_input=st.session_state.option3, 
             preceeding_text="The audience is "
             )
         st.session_state.option4 = option_3to5_edit(
-            input=st.session_state.option4, 
+            option_input=st.session_state.option4, 
             preceeding_text="The tone is "
             )
         st.session_state.option5 = option_3to5_edit(
-            input=st.session_state.option5, 
+            option_input=st.session_state.option5, 
             preceeding_text="The desired response length is "
             )
         st.session_state.option6 = option_6_edit(st.session_state.option6)

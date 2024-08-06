@@ -1,16 +1,25 @@
-# Run tests to verify the prompt_enhancements module
+"""
+Run tests to verify the prompt_enhancements module
+"""
 
-import pytest
+# Imports
 import sys
 import os
+
 # Get the current file's directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory
 parent_dir = os.path.dirname(current_dir)
 # Add the grandparent directory to the system path
 sys.path.append(parent_dir)
-# Import the module
-from source.prompt_enhancements import *
+
+# disable pylint from having issues with importing from a sibling folder
+# pylint: disable=C0413
+# pylint: disable=E0401
+from source.prompt_enhancements import option_3to5_edit, option_6_edit, option_7_edit
+
+
+
 
 
 def test_option_3to5_edit():
