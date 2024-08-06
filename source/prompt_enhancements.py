@@ -14,7 +14,7 @@ def option_3to5_edit(option_input, preceeding_text):
     if option_input == "":
         return option_input
     return preceeding_text + option_input.lower()
-    
+
 
 def option_6_edit(option_input):
     """
@@ -27,7 +27,7 @@ def option_6_edit(option_input):
     if option_input == "Yes":
         return "Showcase your steps to arrive at an answer"
     return ""
-    
+
 
 def option_7_edit(option_input):
     """
