@@ -36,32 +36,32 @@ def test_prompt_combo():
     # Test case 3
     assert prompt_combo("What you are eating", "Pizza", "Burger", "Salad") == \
         "What you are eating. Your response should have the following attributes: \
-        Pizza. Burger. Salad"    
+        Pizza. Burger. Salad"
     # Test case 4
     assert prompt_combo("What you are drinking", "Water", "Soda", "Juice") == \
         "What you are drinking. Your response should have the following attributes: \
-        Water. Soda. Juice"    
+        Water. Soda. Juice"
     # Test case 5
     assert prompt_combo("What you are wearing", "Shirt", "Pants", "Shoes") == \
         "What you are wearing. Your response should have the following attributes: \
-        Shirt. Pants. Shoes" 
+        Shirt. Pants. Shoes"
     # Test case 6
     assert prompt_combo("What you are watching", "Movie", "TV Show", "Documentary") == \
         "What you are watching. Your response should have the following attributes: \
-            Movie. TV Show. Documentary"
+        Movie. TV Show. Documentary"
     # Test case 7
     assert prompt_combo("What you are reading", "Book", "Magazine", "Newspaper") == \
         "What you are reading. Your response should have the following attributes: \
-            Book. Magazine. Newspaper"
+        Book. Magazine. Newspaper"
     # Test case 8
     assert prompt_combo("What you are listening to", "Music", "Podcast", "Audiobook") == \
         "What you are listening to. Your response should have the following attributes: \
-            Music. Podcast. Audiobook"
+        Music. Podcast. Audiobook"
     # Test case 9
     assert prompt_combo("What you are playing", "Game", "Sport", "Instrument") == \
         "What you are playing. Your response should have the following attributes: \
-            Game. Sport. Instrument"
+        Game. Sport. Instrument"
     # Test case 10
     assert prompt_combo("What you are learning", "Language", "Skill", "Subject") == \
         "What you are learning. Your response should have the following attributes: \
-            Language. Skill. Subject"
+        Language. Skill. Subject"
