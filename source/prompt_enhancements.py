@@ -1,46 +1,19 @@
-def option3_edit(input):
+def option_3to5_edit(input, preceeding_text):
     """
-    Minor edit to the user input for option 3.
+    Minor edit to the user input for options 3-5.
     Args:
         input: str
+        preceeding_text: str
     Returns:
         str
     """
     if input == "":
         return input
     else:
-        return "The audience is " + input.lower()
+        return preceeding_text + input.lower()
     
 
-def option4_edit(input):
-    """
-    Minor edit to the user input for option 4.
-    Args:
-        input: str
-    Returns:
-        str
-    """
-    if input == "":
-        return input
-    else:
-        return "The tone is " + input.lower()
-    
-
-def option5_edit(input):
-    """
-    Minor edit to the user input for option 5.
-    Args:
-        input: str
-    Returns:
-        str
-    """
-    if input == "":
-        return input
-    else:
-        return "The desired response length is " + input.lower()
-    
-
-def option6_edit(input):
+def option_6_edit(input):
     """
     Edit to the user input for option 6, making it readable for the LLM.
     Args:
@@ -54,7 +27,7 @@ def option6_edit(input):
         return "Showcase your steps to arrive at an answer"
     
 
-def option7_edit(input):
+def option_7_edit(input):
     """
     Edit to the user input for option 7, making it readable for the LLM.
     Args:
