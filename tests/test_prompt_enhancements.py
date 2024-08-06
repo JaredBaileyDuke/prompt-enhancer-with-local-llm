@@ -1,6 +1,5 @@
 # Run tests to verify the prompt_enhancements module
 
-import pytest
 import sys
 import os
 # Get the current file's directory
@@ -10,7 +9,7 @@ parent_dir = os.path.dirname(current_dir)
 # Add the grandparent directory to the system path
 sys.path.append(parent_dir)
 # Import the module
-from source.prompt_enhancements import *
+from source.prompt_enhancements import option_3to5_edit, option_6_edit, option_7_edit
 
 
 def test_option_3to5_edit():
