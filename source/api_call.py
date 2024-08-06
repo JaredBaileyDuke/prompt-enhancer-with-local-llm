@@ -1,7 +1,13 @@
+"""
+This file contains the code to call the LLM API using Python and Rust.
+The Python code uses the OpenAI Python API to call the LLM API.
+The Rust code sends a POST request to the Rust service to call the LLM API.
+"""
+
 from openai import OpenAI
 import requests
 
-def llm_message(system_message="You are Llamafile, an AI assistant.", user_message="Write a short story about llamas."):
+def llm_message(system_message="You are an AI assistant.", user_message="Write about llamas."):
     """
     Call the LLM API using Python
     This function is in the form of the OpenAI Python API call
