@@ -12,7 +12,10 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 # Add the grandparent directory to the system path
 sys.path.append(parent_dir)
+
+# disable pylint from having issues with importing from a sibling folder
 # pylint: disable=C0413
+# pylint: disable=E0401
 from source.prompt_combo import prompt_combo
 
 
