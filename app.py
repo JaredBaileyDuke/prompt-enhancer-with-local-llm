@@ -251,11 +251,20 @@ with row2_col1:
 
 
         # Clean up wording of user inputs
-        st.session_state.option3 = option3_edit(st.session_state.option3)
-        st.session_state.option4 = option4_edit(st.session_state.option4)
-        st.session_state.option5 = option5_edit(st.session_state.option5)
-        st.session_state.option6 = option6_edit(st.session_state.option6)
-        st.session_state.option7 = option7_edit(st.session_state.option7)
+        st.session_state.option3 = option_3to5_edit(
+            input=st.session_state.option3, 
+            preceeding_text="The audience is "
+            )
+        st.session_state.option4 = option_3to5_edit(
+            input=st.session_state.option4, 
+            preceeding_text="The tone is "
+            )
+        st.session_state.option5 = option_3to5_edit(
+            input=st.session_state.option5, 
+            preceeding_text="The desired response length is "
+            )
+        st.session_state.option6 = option_6_edit(st.session_state.option6)
+        st.session_state.option7 = option_7_edit(st.session_state.option7)
 
 
         # Generate enhanced prompt
