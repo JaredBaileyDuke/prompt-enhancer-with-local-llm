@@ -19,13 +19,57 @@ This tool allows users to interact with an LLM in a safe and secure manner. In a
 - Free
 - Prompt enhancement naturally built into 7 step process
 
-## How To Videos
-### Windows
-### Mac
-### Linux
+## Tool Setup
+### Overview
+The interface of the tool is from a Docker image, which we'll make into a Docker container. The Llamafile is outside the Docker container. The Docker container and Llamafile will be setup to communicate with each other. The result will be a locally hosted app which you can interact with through your web browser.
+
+### Docker Image
+#### Download the Docker Image
+Using a bash terminal, pull the image from DockerHub (ensure that Docker Desktop is running)
+`docker pull jaredbaileyduke/local-prompt-enhancer:latest`
+
+#### Create a Running Container
+Using the downloaded image, create a running container. We will use port 8501 to connect with the Llamafile.
+`docker run -d -p 8501:8501 jaredbaileyduke/local-prompt-enhancer`
+
+### Llamafile
+#### Download a Llamafile
+Executible LLMs can be found at the following GitHub repostitory:
+https://github.com/Mozilla-Ocho/llamafile
+<p>
+  <a href="https://github.com/Mozilla-Ocho/llamafile">
+  https://github.com/Mozilla-Ocho/llamafile
+  </a>
+</p>
+
+I recommend choosing a smaller LLM in order to ensure the best speed performance. For personal use, I've selected TinyLlama from Meta.
+
+#### Run the Llamafile (Windows)
+You can run the Llamafile file two different ways
+
+<p><em>Using Bash, start the executible:</em></p>
+- `./path-to-model/model.llamafile --server --nobrowser -ngl 999`
+
+<p><em>Or in the GUI:</em></p>
+1) Rename the Llamafile. The new name should end in .exe
+  - For example, TinyLlama-1.1B-Chat-v1.0.F16.llamafile should now be TinyLlama-1.1B-Chat-v1.0.F16.llamafile.exe
+2) Run the Llamafile by double clicking on the Llamafile to run the executible
+
+
+#### Run the Llamafile (Mac and Linux)
+1) Make the Llamafile executible
+  - `chmod +x path-to-model/model.llamafile`
+2) Start the executible
+  - `./path-to-model/model.llamafile --server --nobrowser -ngl 999`
+
+### Putting it all Together
+Go to web browser and enter the url:
+`localhost:8501`
+
+The app is now ready for your use.
 
 ## Tool Architecture
-The architecture was ekpt sleak and simple. 
+The architecture was kept sleak and simple. 
 - The users interacts with the Streamlit frontend
 - The frontend calls an API
 - The API call interacts with the LLM, and relays output back to the frontend
