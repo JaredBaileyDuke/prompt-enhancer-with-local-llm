@@ -109,4 +109,4 @@ The architecture was kept sleak and simple.
   <img src="images/architecture.png" alt="Architecture Diagram">
 </p>
 
-I've included optional Rust code for the API call, which can replace the Python code. This code is untested and will be available for use in a future release.
+Included in the repository is optional Rust code for the API call, which can replace the Python code. This code is untested and will be available for use in a future release to allow for improved speed.
