@@ -1,9 +1,13 @@
 name: Format and Lint
 
-on: [push]
+on: 
+  push:
+    branches-ignore:
+      - main
 
 jobs:
   format:
+    if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-20.04
 
     steps:
