@@ -46,7 +46,7 @@ def call_rust_service(system_message, user_message):
     Returns:
         str - response from the API
     """
-    url = "http://127.0.0.1:8081/llm_message"
+    url = "http://host.docker.internal:8081/llm_message"
     payload = {
         "system_message": system_message,
         "user_message": user_message

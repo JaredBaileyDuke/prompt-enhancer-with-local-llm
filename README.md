@@ -68,7 +68,7 @@ Using the downloaded image, create a running container which can communicate wit
 #### Download a Llamafile
 Executible LLMs can be found at the following GitHub repostitory:
 <p>
-  <a href="https://github.com/Mozilla-Ocho/llamafile">
+  <a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank">
   https://github.com/Mozilla-Ocho/llamafile
   </a>
 </p>
@@ -108,3 +108,5 @@ The architecture was kept sleak and simple.
 <p align="center">
   <img src="images/architecture.png" alt="Architecture Diagram">
 </p>
+
+I've included optional Rust code for the API call, which can replace the Python code. This code is untested and will be available for use in a future release.
