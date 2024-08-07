@@ -1,3 +1,3 @@
-docker build -t streamlit-app .
-docker run -d -p 8501:8501 streamlit-app
+docker pull jaredbaileyduke/local-prompt-enhancer:latest
+docker run -d -p 8501:8501 jaredbaileyduke/local-prompt-enhancer
 go to web browser and enter the url localhost:8501
