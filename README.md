@@ -110,3 +110,15 @@ The architecture was kept sleak and simple.
 </p>
 
 Included in the repository is optional Rust code for the API call, which can replace the Python code. This code is untested and will be available for use in a future release to allow for improved speed.
+
+## Performance/Evaluation
+### Speed
+After conducting many tests on my 32GB RAM Windows 11 machine, I've found the use of this app with TinyLlama produces model response times between 12 and 45 secondes. The average response time is near 15 seconds.
+
+I've provided unused Rust code to handle the API call. It is undergoing additional testing and will be implemented in a future release. This functionality reduces the model response time by around 2 seconds on average.
+
+### Accuracy
+Mileage will vary based on the model you select. In general:
+- Newer models will outperform older ones
+- Larger models will outperform smaller ones
+My recommendation of TinyLlama provides a good mix of performance and acceptable model responses.
