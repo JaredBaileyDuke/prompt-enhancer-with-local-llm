@@ -21,6 +21,9 @@ This tool overcomes the risks by allowing users to interact with an LLM in a saf
 
 ## App Use
 
+### Demonstration
+[![Watch a Demonstration Video]("images/video_click.png")](https://www.youtube.com/watch?v=GeWhUzoXpB4)
+
 ### First Stage: Prompt Entry
 At the opening page of the app, you have the ability to write your prompt which the LLM will later answer.
 
