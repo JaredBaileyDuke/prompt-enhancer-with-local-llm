@@ -14,7 +14,7 @@ from source.on_click_functions import *
 ###
 
 ###  page layout as wide
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Systematic Prompt Enhancer', layout="wide")
 
 
 ### set up session state

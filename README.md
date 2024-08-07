@@ -19,23 +19,42 @@ This tool allows users to interact with an LLM in a safe and secure manner. In a
 - Free
 - Prompt enhancement naturally built into 7 step process
 
-## Tool Setup
+## App Use
+
+### First Stage: Prompt Entry
+At the opening page of the app, you have the ability to write your prompt which the LLM will later answer.
+<p align="center">
+  <img src="images/enter_prompt.png" alt="Enter Prompt">
+</p>
+
+### Second Stage: Prompt Enhancement
+There are seven ways in which you can enhance your prompt, or you can skip ahead by clicking the Finish button.
+<p align="center">
+  <img src="images/enter_purpose.png" alt="Enter Purpose">
+</p>
+
+### End Stage & Beyond: Model Output
+At this stage, the model responds to your enhanced prompt. This may take a few minutes to run based on your computer's speed. At the bottom of the page is an option to run another prompt.
+<p align="center">
+  <img src="images/model_output.png" alt="Model Output">
+</p>
+
+## App Setup
 ### Overview
-The interface of the tool is from a Docker image, which we'll make into a Docker container. The Llamafile is outside the Docker container. The Docker container and Llamafile will be setup to communicate with each other. The result will be a locally hosted app which you can interact with through your web browser.
+The interface of the tool is within a Docker image, which we'll make into a Docker container. The Llamafile is located outside the Docker container. The Docker container and Llamafile will be setup to communicate with each other. The result will be a locally hosted app which you can interact with through your web browser.
 
 ### Docker Image
 #### Download the Docker Image
 Using a bash terminal, pull the image from DockerHub (ensure that Docker Desktop is running)
-`docker pull jaredbaileyduke/local-prompt-enhancer:latest`
+- `docker pull jaredbaileyduke/local-prompt-enhancer:latest`
 
 #### Create a Running Container
-Using the downloaded image, create a running container. We will use port 8501 to connect with the Llamafile.
-`docker run -d -p 8501:8501 jaredbaileyduke/local-prompt-enhancer`
+Using the downloaded image, create a running container which can communicate with both the your web browser and the Llamafile.
+- `docker run -d -p 8501:8501 jaredbaileyduke/local-prompt-enhancer`
 
 ### Llamafile
 #### Download a Llamafile
 Executible LLMs can be found at the following GitHub repostitory:
-https://github.com/Mozilla-Ocho/llamafile
 <p>
   <a href="https://github.com/Mozilla-Ocho/llamafile">
   https://github.com/Mozilla-Ocho/llamafile
@@ -47,10 +66,10 @@ I recommend choosing a smaller LLM in order to ensure the best speed performance
 #### Run the Llamafile (Windows)
 You can run the Llamafile file two different ways
 
-<p><em>Using Bash, start the executible:</em></p>
+Using Bash, start the executible:
 - `./path-to-model/model.llamafile --server --nobrowser -ngl 999`
 
-<p><em>Or in the GUI:</em></p>
+Or in the GUI:
 1) Rename the Llamafile. The new name should end in .exe
   - For example, TinyLlama-1.1B-Chat-v1.0.F16.llamafile should now be TinyLlama-1.1B-Chat-v1.0.F16.llamafile.exe
 2) Run the Llamafile by double clicking on the Llamafile to run the executible
