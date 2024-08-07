@@ -1,4 +1,6 @@
 [![Format and Lint](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/format_and_lint.yml/badge.svg)](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/format_and_lint.yml)
+[![Python tests](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/python-tests_and_%20docker.yml/badge.svg)](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/python-tests_and_%20docker.yml)
+[![Docker Build and Deploy](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/docker-build-deploy.yml/badge.svg)](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/docker-build-deploy.yml)
 
 # Prompt Enhancer with a Local LLM
 Creating an automatic prompt enhancer with a local LLM (using llamafile) for increased security and portability
