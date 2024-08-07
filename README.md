@@ -121,4 +121,5 @@ I've provided unused Rust code to handle the API call. It is undergoing addition
 Mileage will vary based on the model you select. In general:
 - Newer models will outperform older ones
 - Larger models will outperform smaller ones
+
 My recommendation of TinyLlama provides a good mix of performance and acceptable model responses.
