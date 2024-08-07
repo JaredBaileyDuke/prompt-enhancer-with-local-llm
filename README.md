@@ -1,3 +1,5 @@
+[![Format and Lint](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/format_and_lint.yml/badge.svg)](https://github.com/JaredBaileyDuke/prompt-enhancer-with-local-llm/actions/workflows/format_and_lint.yml)
+
 # Prompt Enhancer with a Local LLM
 Creating an automatic prompt enhancer with a local LLM (using llamafile) for increased security and portability
 
